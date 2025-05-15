@@ -22,7 +22,7 @@ function App() {
         <Routes>
           <Route path='/' Component={Homepage} />
           <Route path='/characters' Component={Characters} />
-          <Route path='/aboutus' Component={AboutUs} />
+          <Route path='/about_us' Component={AboutUs} />
         </Routes>
       </BrowserRouter>
     </>
