@@ -18,7 +18,13 @@ function App() {
 
   return (
     <>
-
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' Component={Homepage} />
+          <Route path='/characters' Component={Characters} />
+          <Route path='/aboutus' Component={AboutUs} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
