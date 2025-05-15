@@ -8,7 +8,7 @@ import axios from 'axios'
 
 
 const Characters = () => {
-    const [characters, setCharacters] = useState([])
+    const [characters, setCharacters] = useState(null)
     const endpoint = 'https://rickandmortyapi.com/api/character'
 
 
@@ -23,31 +23,38 @@ const Characters = () => {
 
     return (
         <>
-            <div className="container d-flex justify-content-around">
+            <div className="container d-flex justify-content-around  mb-5">
                 <h1>Characters: </h1>
                 <MainNavbar />
             </div>
 
             <main>
-                {characters.map((character) => {
-                    return (
-                        <div className="container">
-                            <div className="col-12 col-md-6">
-                                <div className="card">
-                                    <div className="card-image-top">
-                                        <img src={character.image} className='img-fluid' alt="" />
-                                    </div>
-                                    <div className="card-body">
-                                        <h3>{character.name}</h3>
-                                        <p>{character.species}</p>
-                                        <p>{character.gender}</p>
+                {characters === null ? (
+                    <div>Loading...</div>
+                ) : (
+                    <div className="row">
+                        {characters.map((character) => {
+                            return (
+                                <div className="col-12 col-md-6" key={character.id}>
+                                    <div className="card mb-3">
+                                        <div className="row g-0">
+                                            <div className="col-md-4">
+                                                <img src={character.image} className='img-fluid' alt="" />
+                                            </div>
+                                            <div className="col-md-8">
+                                                <div className="card-body">
+                                                    <h3>{character.name}</h3>
+                                                    <p>{character.species}</p>
+                                                    <p>{character.gender}</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                    );
-                })}
+                            );
+                        })}
+                    </div>
+                )}
             </main>
         </>
     )
