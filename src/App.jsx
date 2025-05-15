@@ -8,6 +8,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 //import Routers
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+//import all pages
+import Homepage from './pages/Homepage'
+import AboutUs from './pages/AboutUs'
+import Characters from './pages/Characters'
+
 function App() {
 
 
