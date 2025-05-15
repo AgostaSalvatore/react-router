@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 const Homepage = () => {
     return (
         <>
-            <div className="container">
-                <MainNavbar />
+            <div className="container d-flex justify-content-around">
                 <h1>Homepage</h1>
+                <MainNavbar />
             </div>
 
         </>

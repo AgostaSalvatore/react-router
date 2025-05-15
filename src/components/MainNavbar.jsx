@@ -22,7 +22,7 @@ const MainNavbar = () => {
     return (
         <header>
             <nav>
-                <ul className='list-unstyled d-flex'>
+                <ul className='list-unstyled d-flex justify-content-around'>
                     {links.map((link) => {
                         return (
                             <li className='mx-2'>

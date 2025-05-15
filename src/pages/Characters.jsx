@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 const Characters = () => {
     return (
         <>
-            <div className="container">
+            <div className="container d-flex justify-content-around">
+                <h1>Characters: </h1>
                 <MainNavbar />
-                <h1>Characters</h1>
             </div>
         </>
     )

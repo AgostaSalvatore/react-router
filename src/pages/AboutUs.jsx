@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 const AboutUs = () => {
     return (
         <>
-            <div className="container">
-                <MainNavbar />
+            <div className="container d-flex justify-content-around">
                 <h1>About Us: </h1>
+                <MainNavbar />
             </div>
         </>
     )

@@ -2,3 +2,14 @@
   background-color: black;
   color: white;
 }
+
+.custom-links{
+  color:aqua;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.custom-links.active{
+  font-weight: 800;
+}
