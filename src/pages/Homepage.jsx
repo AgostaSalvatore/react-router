@@ -1,6 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+//importo MainNavbar
 import MainNavbar from '../components/MainNavbar'
+//importo Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Homepage = () => {

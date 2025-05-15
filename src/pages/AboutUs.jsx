@@ -1,5 +1,7 @@
 import React from 'react'
+//importo MainNavbar
 import MainNavbar from '../components/MainNavbar'
+//importo Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const AboutUs = () => {
