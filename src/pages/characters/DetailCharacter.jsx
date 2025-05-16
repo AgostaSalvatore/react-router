@@ -11,11 +11,16 @@ const DetailCharacter = () => {
 
     const [character, setCharacter] = useState({})
 
-    const getSingleProduct = () => {
-        axios.get(`https://rickandmortyapi.com/api/character${id}`).then((resp) => {
-            setProduct(resp.data)
+    const getSingleCharacter = () => {
+        axios.get(`https://rickandmortyapi.com/api/character/${id}`).then((resp) => {
+            setCharacter(resp.data)
         });
     }
+
+    useEffect(() => {
+        getSingleCharacter();
+    }, [id])
+
 
     return (
         <>
@@ -40,6 +45,22 @@ const DetailCharacter = () => {
                             {character.status}
                         </span>
                     </div>
+                    <button
+                        onClick={() => {
+                            navigate(`/characters/${id - 1}`)
+                        }} disabled={id === 1 ? true : false}
+                    >
+                        Torna indietro
+                    </button>
+
+
+                    <button
+                        onClick={() => {
+                            navigate(`/characters/${id + 1}`)
+                        }}
+                    >
+                        Vai avanti
+                    </button>
                 </div>
             </div>
         </>
