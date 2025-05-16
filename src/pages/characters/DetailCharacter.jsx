@@ -24,43 +24,52 @@ const DetailCharacter = () => {
 
     return (
         <>
-            <h1>Dettagli Personaggio</h1>
+            <div className="container my-4">
+                <h1 className="text-center mb-4">Dettagli Personaggio</h1>
 
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="image-container">
-                            <img src={character.image} alt="" className='img-fluid' />
+                <div className="row justify-content-center mb-4">
+                    <div className="col-md-8">
+                        <div className="card">
+                            <div className="row g-0">
+                                {/* Immagine a sinistra */}
+                                <div className="col-md-4">
+                                    <img 
+                                        src={character.image} 
+                                        alt={character.name} 
+                                        className="img-fluid rounded-start" 
+                                    />
+                                </div>
+                                {/* Informazioni a destra */}
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h2 className="card-title">{character.name}</h2>
+                                        <p className="card-text">Specie: {character.species}</p>
+                                        <p className="card-text">Genere: {character.gender}</p>
+                                        <p className="card-text">Status: {character.status}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h1>
-                            {character.name}
-                        </h1>
-                        <span>
-                            {character.species}
-                        </span>
-                        <span>
-                            {character.gender}
-                        </span>
-                        <span>
-                            {character.status}
-                        </span>
                     </div>
-                    <button
-                        onClick={() => {
-                            navigate(`/characters/${id - 1}`)
-                        }} disabled={id === 1 ? true : false}
-                    >
-                        Torna indietro
-                    </button>
+                </div>
 
-
-                    <button
-                        onClick={() => {
-                            navigate(`/characters/${id + 1}`)
-                        }}
-                    >
-                        Vai avanti
-                    </button>
+                <div className="row justify-content-center">
+                    <div className="col-md-8 d-flex justify-content-between">
+                        <button
+                            onClick={() => navigate(`/characters/${id - 1}`)}
+                            disabled={id === 1}
+                            className="btn btn-primary"
+                        >
+                            Precedente
+                        </button>
+                        
+                        <button
+                            onClick={() => navigate(`/characters/${id + 1}`)}
+                            className="btn btn-primary"
+                        >
+                            Successivo
+                        </button>
+                    </div>
                 </div>
             </div>
         </>
