@@ -7,11 +7,13 @@ import { useState, useEffect } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 //import Routers
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+//import DetailCharacter
+import DetailCharacter from './pages/characters/DetailCharacter'
 
 //import all pages
 import Homepage from './pages/Homepage'
 import AboutUs from './pages/AboutUs'
-import Characters from './pages/Characters'
+import Characters from './pages/characters/Characters'
 
 function App() {
 

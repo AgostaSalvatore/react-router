@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 //importo MainNavbar
-import MainNavbar from '../components/MainNavbar'
+import MainNavbar from '../../components/MainNavbar'
 //importo Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
 //importo axios
