@@ -11,6 +11,12 @@ const DetailCharacter = () => {
 
     const [character, setCharacter] = useState({})
 
+    const getSingleProduct = () => {
+        axios.get(`https://rickandmortyapi.com/api/character${id}`).then((resp) => {
+            setProduct(resp.data)
+        });
+    }
+
     return (
         <div>DetailCharacter</div>
     )
