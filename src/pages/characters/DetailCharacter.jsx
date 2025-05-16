@@ -18,7 +18,31 @@ const DetailCharacter = () => {
     }
 
     return (
-        <div>DetailCharacter</div>
+        <>
+            <h1>Dettagli Personaggio</h1>
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="image-container">
+                            <img src={character.image} alt="" className='img-fluid' />
+                        </div>
+                        <h1>
+                            {character.name}
+                        </h1>
+                        <span>
+                            {character.species}
+                        </span>
+                        <span>
+                            {character.gender}
+                        </span>
+                        <span>
+                            {character.status}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 
